@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Text, FlatList, TouchableOpacity, StyleSheet, Image } from 'react-native';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';  // Import FontAwesome
+import FontAwesome from 'react-native-vector-icons/FontAwesome';  
 
 const DATA = [
-  { id: '1', name: 'Pinarello', price: '$1800', image: require('../assets/image_1.png') },
-  { id: '2', name: 'Pina Mountain', price: '$1700', image: require('../assets/image_3.png') },
+  { id: '1', name: 'Pinarello', price: '$1800', image: require('../assets/image_3.png') },
+  { id: '2', name: 'Pina Mountain', price: '$1700', image: require('../assets/image_1.png') },
   { id: '3', name: 'Pina Bike', price: '$1500', image: require('../assets/image2.png') },
   { id: '4', name: 'Pinarello', price: '$1900', image: require('../assets/image_3.png') },
   { id: '5', name: 'Pinarello', price: '$2700', image: require('../assets/image_1.png') },
@@ -15,12 +15,12 @@ const Screen2 = ({ navigation }) => {
   const renderItem = ({ item }) => (
     <TouchableOpacity 
       style={styles.item} 
-      onPress={() => navigation.navigate('Screen3', { image: item.image })} // Chuyển đến Screen3 và truyền hình ảnh
+      onPress={() => navigation.navigate('Screen3', { image: item.image })} 
     >
       <View style={styles.heartIconContainer}>
-        <FontAwesome name="heart-o" size={24} color="gray" /> {/* FontAwesome heart icon */}
+        <FontAwesome name="heart-o" size={24} color="gray" /> 
       </View>
-      <Image source={item.image} style={styles.itemImage} resizeMode="contain" /> {/* Ensure full image */}
+      <Image source={item.image} style={styles.itemImage} resizeMode="contain" />
       <Text style={styles.itemName}>{item.name}</Text>
       <Text style={styles.itemPrice}>{item.price}</Text>
     </TouchableOpacity>
@@ -94,12 +94,11 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     alignItems: 'center',
     width: '45%',
-    height: 200, // Set a height to accommodate the image fully
+    height: 200,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 3.84,
-    // Elevation for Android
     elevation: 5,
   },
   heartIconContainer: {
@@ -109,10 +108,10 @@ const styles = StyleSheet.create({
     zIndex: 1,
   },
   itemImage: {
-    width: '100%',  // Set to take up full width
-    height: '60%',  // Control the height to maintain the aspect ratio
+    width: '100%',
+    height: '60%',
     marginBottom: 10,
-    backgroundColor: '#fdf7dd', // Background color matching the item
+    backgroundColor: '#fdf7dd',
   },
   itemName: {
     fontSize: 16,
