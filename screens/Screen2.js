@@ -3,8 +3,8 @@ import { View, Text, FlatList, TouchableOpacity, StyleSheet, Image } from 'react
 import FontAwesome from 'react-native-vector-icons/FontAwesome';  // Import FontAwesome
 
 const DATA = [
-  { id: '1', name: 'Pinarello', price: '$1800', image: require('../assets/image_3.png') },
-  { id: '2', name: 'Pina Mountain', price: '$1700', image: require('../assets/image_1.png') },
+  { id: '1', name: 'Pinarello', price: '$1800', image: require('../assets/image_1.png') },
+  { id: '2', name: 'Pina Mountain', price: '$1700', image: require('../assets/image_3.png') },
   { id: '3', name: 'Pina Bike', price: '$1500', image: require('../assets/image2.png') },
   { id: '4', name: 'Pinarello', price: '$1900', image: require('../assets/image_3.png') },
   { id: '5', name: 'Pinarello', price: '$2700', image: require('../assets/image_1.png') },
